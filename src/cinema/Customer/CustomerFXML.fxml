@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.Customer.CustomerFXMLController">
+   <children>
+      <StackPane prefHeight="777.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="777.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <AnchorPane prefHeight="81.0" prefWidth="1500.0" styleClass="top-form" stylesheets="@Customer.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="1416.0" layoutY="11.0" mnemonicParsing="false" onAction="#close" prefHeight="60.0" prefWidth="69.0" styleClass="close" stylesheets="@Customer.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="2.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="maximize" layoutX="1346.0" layoutY="11.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="69.0" styleClass="maxmize">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SQUARE" size="2.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minimize" layoutX="1266.0" layoutY="11.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="69.0" styleClass="minmize" stylesheets="@Customer.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="2.5em" />
+                                 </graphic>
+                              </Button>
+                              <ImageView fitHeight="55.0" fitWidth="68.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../cinema.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="82.0" layoutY="17.0" text="Mac.Cinema" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="704.0" prefWidth="456.0" styleClass="welcome_pane" stylesheets="@Customer.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="162.0" fitWidth="179.0" layoutX="120.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../—Pngtree—cinema%20vector%20illustration_3704537.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="welcome_title" layoutX="89.0" layoutY="204.0" text="Welcome To MacCinema" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="213.99993896484375" layoutX="216.0" layoutY="266.0" startX="-191.6000518798828" stroke="WHITE" strokeWidth="3.0" />
+                              <Button fx:id="movies_btn" layoutX="146.0" layoutY="348.0" mnemonicParsing="false" onAction="#switch_btn_menu" prefHeight="40.0" prefWidth="144.0" styleClass="nav-btn-active" stylesheets="@Customer.css" text="Movies">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="reservation_btn" layoutX="146.0" layoutY="413.0" mnemonicParsing="false" onAction="#switch_btn_menu" prefHeight="40.0" prefWidth="144.0" styleClass="nav-btn" stylesheets="@Customer.css" text="Reservation" visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="logout_btn" layoutX="146.0" layoutY="574.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="144.0" styleClass="logout" stylesheets="@Customer.css" text="Logout">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="reserve_info" layoutX="127.0" layoutY="485.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" styleClass="nav-btn" stylesheets="@Customer.css" text="Reservation Info." visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane fx:id="Reservation_pane" prefHeight="696.0" prefWidth="1044.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <AnchorPane fx:id="Movies_pane" prefHeight="696.0" prefWidth="1044.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="25.0" layoutY="40.0" prefHeight="107.0" prefWidth="652.0" styleClass="dashboard" stylesheets="@Customer.css">
+                                       <children>
+                                          <TextField fx:id="search_bar" layoutX="36.0" layoutY="21.0" onKeyTyped="#MovieSearch" prefHeight="64.0" prefWidth="480.0" promptText="Search..">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="search_btn" layoutX="516.0" layoutY="21.0" mnemonicParsing="false" onAction="#MovieSearch" prefHeight="63.0" prefWidth="70.0" styleClass="btn_sign" stylesheets="@Customer.css">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" size="2.5em" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="35.0" layoutY="179.0" prefHeight="489.0" prefWidth="642.0" styleClass="dashboard" stylesheets="@Customer.css">
+                                       <children>
+                                          <TableView fx:id="Movies_Table" layoutX="10.0" layoutY="14.0" onMouseClicked="#selectData" prefHeight="431.0" prefWidth="622.0" stylesheets="@Customer.css">
+                                             <columns>
+                                                <TableColumn fx:id="Movie_id_col" editable="false" prefWidth="104.79989624023438" text="Movie Id" />
+                                                <TableColumn fx:id="Movie_name_col" editable="false" prefWidth="132.79998779296875" text="Movie Name" />
+                                                <TableColumn fx:id="Duration_col" editable="false" prefWidth="112.800048828125" text="Duration" />
+                                                <TableColumn fx:id="r_date_col" editable="false" prefWidth="114.39996337890625" text="Release Date" />
+                                                <TableColumn fx:id="price_col" editable="false" prefWidth="75.0" text="Price" />
+                                                <TableColumn fx:id="img_col" editable="false" prefWidth="75.0" text="img" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="690.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="340.0" styleClass="dashboard0" stylesheets="@Customer.css">
+                                       <children>
+                                          <ImageView fx:id="img_view" fitHeight="215.0" fitWidth="233.0" layoutX="40.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Label layoutX="14.0" layoutY="309.0" text="Movie Name :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="mov_name" editable="false" layoutX="142.0" layoutY="305.0" prefHeight="34.0" prefWidth="182.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="14.0" layoutY="353.0" text="Duration :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="402.0" text="Release Date :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="451.0" text="Price :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="movie_id_field" editable="false" layoutX="25.0" layoutY="277.0" prefHeight="26.0" prefWidth="50.0" visible="false" />
+                                          <Button fx:id="clear_btn" layoutX="211.0" layoutY="250.0" mnemonicParsing="false" onAction="#clear_btn" styleClass="clear-btn" stylesheets="@Customer.css" text="Clear">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="reserve_btn" layoutX="83.0" layoutY="539.0" mnemonicParsing="false" onAction="#go_To_ReserveInfo" prefHeight="40.0" prefWidth="194.0" styleClass="reseve-btn" stylesheets="@Customer.css" text="Reserve" visible="false">
+                                             <font>
+                                                <Font name="System Bold Italic" size="24.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </Button>
+                                          <TextField fx:id="mov_name1" editable="false" layoutX="152.0" layoutY="315.0" prefHeight="34.0" prefWidth="182.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="duration_mov" editable="false" layoutX="132.0" layoutY="349.0" prefHeight="34.0" prefWidth="182.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="r_date_mov_f" editable="false" layoutX="142.0" layoutY="398.0" prefHeight="34.0" prefWidth="182.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="price_f" editable="false" layoutX="100.0" layoutY="447.0" prefHeight="34.0" prefWidth="182.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="imgLab" layoutX="286.0" layoutY="261.0" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="Reserve_pane" prefHeight="696.0" prefWidth="1044.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="26.0" layoutY="15.0" prefHeight="656.0" prefWidth="992.0" styleClass="dashboard0" stylesheets="@Customer.css">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="239.0" text="UserName:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="userName5" editable="false" layoutX="252.0" layoutY="237.0" prefHeight="36.0" prefWidth="230.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="47.0" layoutY="322.0" text="Movie Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="movie_name5" editable="false" layoutX="286.0" layoutY="320.0" prefHeight="36.0" prefWidth="230.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="610.0" layoutY="82.0" text="User ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="userid5" editable="false" layoutX="766.0" layoutY="79.0" prefHeight="58.0" prefWidth="152.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="47.0" layoutY="394.0" text="Release Date:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="r_date5" editable="false" layoutX="302.0" layoutY="392.0" prefHeight="36.0" prefWidth="230.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="597.0" layoutY="278.0" text="Duration:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="dur5" editable="false" layoutX="796.0" layoutY="276.0" prefHeight="58.0" prefWidth="152.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="40.0" layoutY="455.0" text="Price :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="price5" editable="false" layoutX="157.0" layoutY="453.0" prefHeight="58.0" prefWidth="210.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="602.0" layoutY="171.0" text="Movie ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="movie_id5" editable="false" layoutX="781.0" layoutY="168.0" prefHeight="58.0" prefWidth="152.0" styleClass="details-field" stylesheets="@Customer.css">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="566.0" layoutY="376.0" text="Seat:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="hall5" layoutX="157.0" layoutY="547.0" prefHeight="38.0" prefWidth="154.0" promptText="Hall" />
+                                          <Label layoutX="48.0" layoutY="540.0" text="Hall :" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="seat5" layoutX="677.0" layoutY="394.0" prefHeight="38.0" prefWidth="195.0" promptText="Seats" />
+                                          <Button fx:id="reserve5" layoutX="608.0" layoutY="541.0" mnemonicParsing="false" onAction="#Reserve_Ticket" prefHeight="47.0" prefWidth="151.0" styleClass="reseve-btn" stylesheets="@Customer.css" text="Reserve">
+                                             <font>
+                                                <Font name="System Bold Italic" size="24.0" />
+                                             </font>
+                                          </Button>
+                                          <ImageView fx:id="img5" fitHeight="187.0" fitWidth="234.0" layoutX="35.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center></BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
