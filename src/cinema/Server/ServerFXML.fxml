@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.Server.ServerFXMLController">
+   <children>
+      <StackPane prefHeight="777.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="777.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <AnchorPane prefHeight="70.0" prefWidth="1500.0" styleClass="top-form" stylesheets="@Server.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="1416.0" layoutY="7.0" mnemonicParsing="false" onAction="#close" prefHeight="60.0" prefWidth="69.0" styleClass="close" stylesheets="@../Ticket_attendant/Ticket_Attendant.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="2.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="maximize" layoutX="1331.0" layoutY="7.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="69.0" styleClass="maxmize" stylesheets="@../Ticket_attendant/Ticket_Attendant.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SQUARE" size="2.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minimize" layoutX="1247.0" layoutY="7.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="69.0" styleClass="minmize" stylesheets="@../Ticket_attendant/Ticket_Attendant.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="2.5em" />
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="81.0" layoutY="17.0" text="Cinema Server" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="54.0" fitWidth="70.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../—Pngtree—cinema%20vector%20illustration_3704537.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="dashboard0" stylesheets="@Server.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane layoutX="34.0" layoutY="26.0" prefHeight="574.0" prefWidth="1060.0" styleClass="dashboard" stylesheets="@Server.css">
+                                 <children>
+                                    <TableView fx:id="PendingTable" layoutX="28.0" layoutY="22.0" prefHeight="516.0" prefWidth="997.0">
+                                       <columns>
+                                          <TableColumn fx:id="username0_col" editable="false" prefWidth="98.39996337890625" text="UserName" />
+                                          <TableColumn fx:id="mov_name0_col" editable="false" prefWidth="118.4000244140625" text="Movie_Name" />
+                                          <TableColumn fx:id="seatNum0_col" editable="false" prefWidth="110.39996337890625" text="Seat Number" />
+                                          <TableColumn fx:id="R_date0_col" editable="false" prefWidth="124.79998779296875" text="Release Date" />
+                                          <TableColumn fx:id="Reser_id0_col" editable="false" prefWidth="107.199951171875" text="reservation_id" />
+                                          <TableColumn fx:id="Price0_col" editable="false" prefWidth="96.8001708984375" text="Price" />
+                                          <TableColumn fx:id="status0_col" editable="false" prefWidth="111.199951171875" text="Status" />
+                                          <TableColumn fx:id="seatId0_col" editable="false" prefWidth="93.5999755859375" text="Seat_id" />
+                                          <TableColumn fx:id="Reserv_date0_col" editable="false" prefWidth="133.5999755859375" text="Reservation date" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="1124.0" layoutY="28.0" prefHeight="570.0" prefWidth="350.0" styleClass="dashboard" stylesheets="@Server.css">
+                                 <children>
+                                    <TextArea fx:id="outputTextarea" editable="false" layoutX="29.0" layoutY="28.0" prefHeight="519.0" prefWidth="299.0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center></BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
