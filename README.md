@@ -1,1 +1,2 @@
 # Project-Cinema-Ticket-Reservation-System
+A Cinema Ticket Reservation System built with JavaFX featuring a user-friendly interface. It employs parallel processing to handle multiple booking requests simultaneously, ensuring fast, efficient seat allocation and real-time updates. This system improves performance, reduces wait time, and enhances user experience by processing concurrent transactions securely and reliably.
